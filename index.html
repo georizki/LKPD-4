@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1
+//         let pabp = 82;
+
+// let mtk = 82;
+
+// let dpk = 77;
+
+// let rata_rata = (pabp + mtk + dpk)/3
+
+// //proses logika
+// if(rata_rata >= 80 && rata_rata <= 100){
+//     grade = "A";
+// }
+// else if(rata_rata >= 75 && rata_rata <= 80){
+//     grade = "B";
+// }
+// else if(rata_rata >= 65 && rata_rata <= 75){
+//     grade = "C";
+// }
+// else if(rata_rata >= 45 && rata_rata <= 65){
+//     grade = "D";
+// }
+// else if(rata_rata >= 0 && rata_rata <= 45){
+//     grade = "E";
+// }
+// else if(rata_rata > 0){
+//     grade = "K";
+// }
+
+// //menampilkan 
+// console.log("Segini Nilai Rata-ratanya= " +  rata_rata)
+// console.log(grade)
+        // 2//
+    
+// let KodePegawai = prompt("Masukkan kode pegawai (gddmmyyyynn):")
+// let golongan = parseInt(KodePegawai[0])
+// let Hari = parseInt(KodePegawai.substring(1, 3))
+// let Bulan = parseInt(KodePegawai.substring(3, 5))
+// let Tahun = parseInt(KodePegawai.substring(5, 9))
+// let urut = parseInt(KodePegawai.substring(9))
+// let MonthNames =[
+//     "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+//     "Juli", "Agsutus", "September", "Oktober", "November", "Desember"
+// ]
+// let NamaBulan = MonthNames[Bulan - 1]
+
+
+
+// console.log(` ${KodePegawai} Adalah Seorang Pegawai Bergolongan ${golongan}, Lahir Pada Tanggal ${Hari} ${NamaBulan} ${Tahun} Dan bernomor Urut ${urut}`)
+//3//
+let waktuInput = prompt("Masukkan waktu dalam format hh:mm:ss")
+let [jam, menit, detik] = waktuInput.split(':').map(Number)
+let totalDetik = jam * 3600 + menit * 60 + detik
+
+totalDetik = (totalDetik + 1) % (24 * 3600)
+jam = Math.floor(totalDetik / 3600)
+menit = Math.floor((totalDetik % 3600) / 60)
+detik = totalDetik % 60
+
+const waktuSetelahDitambahkan = `${String(jam).padStart(2, '0')}:${String(menit).padStart(2, '0')}:${String(detik).padStart(2, '0')}`
+
+console.log(`Waktu setelah ditambahkan 1 detik: ${waktuSetelahDitambahkan}`)
+
+
+
+
+        
+  
+    
+    </script>
+</body>
+</html>
